@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+.card {
+  opacity: 0.9;
+}
+/* Navigation bar definitions */
+.navbar {
+  padding: 0;
+}
+.navbar .navbar-nav .nav-link {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 1em;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: #030412;
+  width: 0;
+  margin: 0 auto;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 7px;
+  transition: all ease 0.5s;
+}
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #11295a;
+}
+
+.navbar-dark .navbar-brand {
+  color: rgb(25, 24, 24);
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0;
+  }
+  .navbar .navbar-nav .nav-item {
+    margin: 0 1em;
+  }
+}
+
+/* Hotel custom color */
+
+.dropdown-item {
+  margin-left: 33px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: #0f100f;
+  background: white;
+}
+
+.dropdown-item:hover {
+  color: #0f100f;
+  background: white;
+}
+
+.page-link {
+  transition: all ease 0.7s;
+  border: none;
+  background-color: #0d0632;
+  color: #ffffff;
+}
+.page-link:active {
+  color: white;
+  background-color: #0d0632;
+}
+
+.page-link:hover {
+  border: none;
+  color: #ffffff;
+  background-color: #c83606;
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.btn-hotel {
+  transition: all ease 0.5s;
+  border: none;
+  background-color: #0d0632;
+  color: #fff;
+  scale: 1;
+  scale: 1s ease out;
+  background-color: 2s ease-out;
+}
+.btn-hotel:hover {
+  scale: 1.1;
+  background-color: #c83606;
+  color: #fff;
+  transition: 0.7s;
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.manage_rooms {
+  font-weight: 700;
+  font-size: 1.55rem;
+  text-decoration: none;
+  color: #0d0632;
+}
+.manage_rooms:hover {
+  color: #c83606;
+  transition: 0.7s;
+}
+
+.btn-action {
+  color: #0d0632;
+  transition: all ease 0.7s;
+}
+.btn-action-edit {
+  color: #0d0632;
+  transition: all ease 0.7s;
+}
+.btn-action-trash {
+  color: #0d0632;
+  transition: all ease 0.7s;
+}
+
+.btn-action:hover {
+  color: #c83606;
+}
+.btn-action-edit:hover {
+  color: #2501d6;
+}
+.btn-action-trash:hover {
+  color: #ff0000;
+}
+.btn-admin {
+  margin-left: 20px;
+  color: #0d0632;
+  transition: all ease 0.7s;
+}
+
+.btn-admin:hover {
+  color: #c83606;
+}
+
+.hovering {
+  color: black;
+  font-size: 17px;
+  font-size: 2s ease in out;
+  transition: all ease 0.5s;
+}
+
+.hovering:hover {
+  font-size: 20px;
+}
+
+.my_logo {
+  border-radius: 12px;
+  transition: all ease 0.5s;
+  aspect-ratio: 1/1;
+}
+
+.hotel-color {
+  color: #f93939;
+}
+.room-price {
+  color: #303130;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.vertical-rule {
+  border-left: "0.5px solid black";
+  height: "100vh";
+}
+
+.parallax {
+  background-image: url("./assets/images/parrall.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.header {
+  position: relative;
+  height: 150px;
+  background-size: cover;
+  background-image: url("./assets/images/services4.jpg");
+  background-position: center center;
+}
+.header-title {
+  color: #fff;
+  font-size: 4rem;
+  align-content: center;
+}
+
+.parallax {
+  margin-top: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+.animated-texts h1 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.animated-texts p,
+h1,
+h2 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  60% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Header overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  justify-content: flex-start;
+}
+
+/* The header banner */
+.header-banner {
+  background-image: url("./assets/images/services-1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 80vh;
+}
+
+.header-banner {
+  position: relative;
+  height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-banner h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-banner h1 {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1919;
+  height: 60px;
+  text-align: center;
+}

@@ -1,0 +1,13 @@
+package com.pratul.HBApplication.service;
+
+import com.pratul.HBApplication.model.User;
+
+import java.util.List;
+
+
+public interface IUserService {
+    User registerUser(User user);
+    List<User> getUsers();
+    void deleteUser(String email);
+    User getUser(String email);
+}
